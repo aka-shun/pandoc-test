@@ -9,7 +9,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: docker://pandoc/latex:2.9
         with:
-          args: -s ./input/simple.md -o simple.html
+          args: -s ./input/simple.md -o simple.pdf  -V documentclass=ltjsarticle --latex-engine=lualatex
       - name: output files
         uses: actions/upload-artifact@v1
         with:
