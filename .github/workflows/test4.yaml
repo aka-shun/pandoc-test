@@ -9,9 +9,9 @@ jobs:
       - uses: actions/checkout@v2
       - uses: docker://pandoc/latex:2.9
         with:
-          args: -s ./input/sample.md -o sample.html
+          args: -s ./input/simple.md -o simple.html
       - name: output files
         uses: actions/upload-artifact@v1
         with:
           name: pandoced-files
-          path: sample.html
+          path: simple.html
